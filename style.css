@@ -1,0 +1,336 @@
+:root {
+    --primary-color: #F2F9FE;
+    --secondary-color: #111729;
+    --tertiary-color: white;
+    --button-color: #223344;
+    --sun-color: #F2F9FE;
+}
+
+
+
+.dark-theme {
+    --primary-color: #111729;
+    --secondary-color: #F2F9FE;
+    --tertiary-color: #223344;
+    --button-color: #F2F9FE;
+    --sun-fill: #223344;
+    --sun-color: #223344;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: var(--primary-color);
+    overflow: hidden;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    height: 32px;
+    top: 28px;
+    width: 85%;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    list-style: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.Product,
+.Resource,
+.Contact {
+    opacity: 0.5;
+}
+
+.logo,
+.toggle-dark {
+    position: relative;
+    top: 10px;
+}
+
+.nav-container {
+    position: relative;
+    left: 7%;
+}
+
+.toggle-dark-mobile {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+.toggle-dark {
+    gap: 0px;
+    z-index: 10;
+    margin-left: 10px;
+}
+
+.toggle-dark img {
+    z-index: 50;
+    position: relative;
+}
+
+
+.toggle-dark-mobile,
+.toggle-dark {
+    background-color: #223344;
+    box-shadow: 2px 2px 10px #111729;
+    transition: all 0.3s ease;
+    border: none;
+    border-radius: 60px;
+    cursor: pointer;
+
+}
+
+.moon {
+    background-color: var(--button-color);
+    border-radius: inherit;
+}
+
+.sun {
+    background-color: var(--sun-color);
+    border-radius: inherit;
+}
+
+.light {
+    height: 48px;
+    width: 100%;
+    background-color: var(--primary-color);
+}
+
+.body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    left: 6.6%;
+}
+
+.heading {
+    font-size: 40px;
+    color: var(--secondary-color);
+    width: 70%;
+    gap: 0;
+    position: relative;
+    top: 100px;
+}
+
+.img {
+    width: 80%;
+    position: relative;
+    top: 10vh;
+}
+
+.subheading {
+    font-weight: 600;
+    color: #909193;
+    font-size: 18px;
+    width: 60%;
+}
+
+.body-full {
+    flex-direction: row;
+}
+
+.main-img {
+    justify-content: right;
+    align-items: center;
+    min-width: 40%;
+    position: relative;
+    bottom: 2vvh;
+}
+
+.body-container {
+    width: 80%;
+}
+
+h1,
+h4 {
+    margin: 0;
+}
+
+.slogan {
+    position: relative;
+    top: 92px;
+    color: var(--secondary-color);
+}
+
+.subs {
+    position: relative;
+    top: 12vh;
+}
+
+.get-started {
+    background-color: #2A4DD0;
+    color: white;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border-radius: 13px;
+    width: 17%;
+    position: relative;
+    border: none;
+    cursor: pointer;
+    font-weight: 800;
+}
+
+.main-btns {
+    position: relative;
+    top: 22px;
+    font-size: 16px;
+    display: flex;
+    gap: 32px;
+}
+
+.live-demo {
+    color: #2A4DD0;
+    text-decoration: underline;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.live {
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+
+.menu-icon {
+    display: none;
+}
+
+.ticks {
+    position: relative;
+    top: 40px;
+    display: flex;
+    gap: 20px;
+    font-family: "Poppins", sans-serif;
+    color: var(--secondary-color);
+}
+
+.software-img,
+.credit-img {
+    position: relative;
+    top: 6px;
+}
+
+@media screen and (max-width: 1279px) {
+    .heading {
+        font-size: 20px;
+        line-height: 45px;
+    }
+
+    .body {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+
+    .main-img {
+        min-width: 50%;
+        position: relative;
+        bottom: 1vh;
+    }
+
+    .get-started {
+        font-size: 60%;
+        width: 20%;
+    }
+}
+
+.menu-icon div {
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    background-color: var(--secondary-color);
+    transition: all ease 0.3s;
+
+}
+
+@media (max-width: 700px) {
+
+    .nav-list {
+        position: fixed;
+        top: -3%;
+        right: -250px;
+        width: 250px;
+        height: 100%;
+        background-color: var(--tertiary-color);
+        flex-direction: column;
+        text-align: center;
+        padding-top: 60px;
+        transition: right 0.3s ease;
+        z-index: 4;
+        display: none;
+        font-size: 30px;
+    }
+
+    .nav-list {
+        position: block;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin: 0;
+        padding-bottom: 500vh;
+    }
+
+
+    .nav-list li {
+        padding: 10px 20px;
+        /* Adjust padding for better spacing */
+        /* Optional: add a border for separation */
+    }
+
+    .nav-list li a {
+        color: var(--secondary-color);
+        /* Change text color */
+        text-decoration: none;
+        /* Remove underline from links */
+        display: block;
+        /* Make the link cover the entire area */
+        width: 100%;
+        /* Ensure full width */
+
+    }
+
+    .toggle-dark-mobile {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-bar.show .nav-list {
+        right: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+        z-index: 5;
+    }
+
+    .toggle-dark-mobile {
+        display: block;
+    }
+
+    .toggle-dark {
+        display: none;
+    }
+
+    .nav-container .menu-icon {
+        justify-content: right;
+        position: relative;
+        left: 77%;
+    }
+}

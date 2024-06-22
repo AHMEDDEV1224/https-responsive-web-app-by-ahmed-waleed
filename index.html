@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Responsive-Web-Page</title>
+</head>
+
+<body>
+    <div class="nav-container">
+        <div class="justifier">
+            <nav id="nav-List" class="nav-bar">
+                <div class="logo">
+                    <img id="logo-img" src="alarado-icon-homepage.svg" alt="">
+                </div>
+
+                <ul class="nav-list">
+                    <li class="About"><a href="">About us</a></li>
+                    <li class="Product"><a href="">Product</a></li>
+                    <li class="Resource"><a href="">Resource</a></li>
+                    <li class="Contact"><a href="">Contact</a></li>
+                    <button id="toggle-dark-mobile" class="toggle-dark-mobile"><img id="moon" class="moon"
+                            src="Moon_fill_light.svg" alt="">
+                        <img id="sun" class="sun" src="./Sun_fill.svg" alt=""></button>
+                </ul>
+                <button id="toggle-dark" class="toggle-dark"><img id="moon" class="moon" src="Moon_fill_light.svg"
+                        alt=""><img id="sun" class="sun" src="./Sun_fill.svg" alt=""></button>
+            </nav>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </div>
+    </div>
+    <div class="body">
+        <div class="body-container">
+            <div class="slogan">
+                <h4>&#x1F60E SIMPLE WAY TO COMMUNICATE</h4>
+            </div>
+            <header class="heading">
+                <h1>Actions for Accessibility in Design</h1>
+            </header>
+            <div class="subs">
+                <sub class="subheading">The fastest way to build and deploy websites with reusable components</sub>
+                <div class="main-btns">
+                    <button class="get-started">GET STARTED</button>
+                    <div class="live">
+                        <a class="live-demo">Get live demo</a>
+                    </div>
+                </div>
+                <div class="ticks">
+                    <sub class="credit-card">
+                        <img class="credit-img" src="./Done_ring_round_fill.svg" alt=""> No credit card required
+                    </sub>
+                    <sub class="software">
+                        <img class="software-img" src="./Done_ring_round_fill.svg" alt=""> No software to install
+                    </sub>
+                </div>
+            </div>
+        </div>
+        <div class="main-img">
+            <img class="img" src="./hero-image-simple-homepage.png" alt="">
+        </div>
+    </div>
+    <script>
+        const darkMobile = document.getElementById("toggle-dark-mobile");
+        const dark = document.getElementById("toggle-dark");
+        const myImg = document.getElementById("logo-img");
+        const moon = document.getElementById("moon");
+        const sun = document.getElementById("sun");
+
+
+        dark.addEventListener('click', function () {
+            document.body.classList.toggle("dark-theme");
+            if (myImg.src.endsWith("alarado-icon-homepage.svg")) {
+                myImg.src = "alarado-icon-homepage-dark.svg";
+            } else {
+                myImg.src = "alarado-icon-homepage.svg";
+            }
+            if (moon.src.endsWith("Moon_fill_light.svg")) {
+                moon.src = "Moon_fill.svg";
+            } else {
+                moon.src = "Moon_fill_light.svg";
+            }
+            if (sun.src.endsWith("Sun_fill.svg")) {
+                sun.src = "image.png";
+            } else {
+                sun.src = "Sun_fill.svg";
+            }
+        })
+
+        darkMobile.addEventListener('click', function () {
+            document.body.classList.toggle("dark-theme");
+            if (myImg.src.endsWith("alarado-icon-homepage.svg")) {
+                myImg.src = "alarado-icon-homepage-dark.svg";
+            } else {
+                myImg.src = "alarado-icon-homepage.svg";
+            }
+            if (moon.src.endsWith("Moon_fill_light.svg")) {
+                moon.src = "./Moon_fill.svg";
+            } else {
+                moon.src = "Moon_fill_light.svg";
+            }
+            if (sun.src.endsWith("Sun_fill.svg")) {
+                sun.src = "image.png";
+            } else {
+                sun.src = "Sun_fill.svg";
+            }
+        })
+
+        function toggleMenu() {
+            var navList = document.getElementById("nav-List");
+            if (navList) {
+                navList.classList.toggle("show");
+            } else {
+                console.error("navList element not found.");
+            }
+        }
+        const navSlide = () => {
+            const burger = document.querySelector('.menu-icon');
+            const nav = document.querySelector('.nav-links');
+            const navLinks = document.querySelectorAll('.nav-list li');
+        }
+        navSlide();
+    </script>
+</body>
+
+</html>
